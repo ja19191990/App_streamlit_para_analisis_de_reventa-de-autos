@@ -2,18 +2,22 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.markdown('''
-            <style>
-            .stForm {
-            background-color: #0000000
-            }
-            </style>
-''', unsafe_allow_html=True)
+st.markdown(
+    """ 
+    <style> 
+    body { 
+        background-color: #005b96; /* Azul como color de fondo */ 
+        color: #ffffff; /* Blanco como color de texto */ 
+    } 
+    </style> 
+    """,
+    unsafe_allow_html=True,
+)
 
 st.header('Vehicles advertisement')
 st.write('Selecciona el gráfico deseado')
 
-car_data = pd.read_csv('datasets/cars_us.csv')
+car_data = pd.read_csv(r'data\car_us.csv')
 hist_check_price = st.checkbox('Desplegar histograma de precios')
 if hist_check_price:
     st.write('Histograma del precio de vehículos')
