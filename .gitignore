@@ -171,5 +171,3 @@ cython_debug/
 .pypirc
 
 # Data
-data
-data/car_us.csv
